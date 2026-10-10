@@ -75,10 +75,10 @@
     },
     {
         "property": "mod.autoexpand.workspace_top_buffer",
-        "label": "Space above pinned tabs when workspace indicator is hidden (px)",
+        "label": "Tab list vertical offset when workspace indicator is hidden (px, negative to move up)",
         "type": "string",
         "defaultValue": "0px",
-        "placeholder": "e.g. 32px"
+        "placeholder": "e.g. -33px or 32px"
     },
     {
         "property": "mod.autoexpand.remove_line_separator",

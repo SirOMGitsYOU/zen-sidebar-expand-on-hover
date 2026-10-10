@@ -41,8 +41,13 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
         .zen-current-workspace-indicator {
           display: none !important;
         }
-        vbox.zen-workspace-tabs-section.zen-workspace-pinned-tabs-section {
-          padding-top: var(--mod-autoexpand-workspace_top_buffer) !important;
+        /* margin-top accepts negative values; padding-top does not */
+        #navigator-toolbox .zen-essentials-container,
+        #navigator-toolbox #TabsToolbar {
+          margin-top: var(--mod-autoexpand-workspace_top_buffer) !important;
+        }
+        #navigator-toolbox #TabsToolbar .zen-essentials-container {
+          margin-top: 0 !important;
         }
       }
 

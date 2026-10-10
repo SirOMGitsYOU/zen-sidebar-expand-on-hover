@@ -45,5 +45,5 @@ In the mods menu, click the gear icon:
 - Performance mode, collapsed/expanded widths, animation delays
 - Essentials layout, fade sleeping tabs/folders
 - Hide workspace indicator
-- **Space above pinned tabs when workspace indicator is hidden (px)** — e.g. `32px`
+- **Tab list vertical offset when workspace indicator is hidden (px)** — use negative values (e.g. `-33px`) to move tabs up
 - Remove pinned-tabs separator line
