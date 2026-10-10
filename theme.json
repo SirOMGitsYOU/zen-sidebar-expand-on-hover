@@ -1,0 +1,15 @@
+{
+  "id": "bd92a9a0-1c00-4187-a66e-94c389fa5a59",
+  "name": "Sidebar Expand on Hover",
+  "description": "Minimizes the sidebar and expands it on hover (local fork)",
+  "homepage": "https://github.com/SirOMGitsYOU/zen-sidebar-expand-on-hover",
+  "style": "https://raw.githubusercontent.com/SirOMGitsYOU/zen-sidebar-expand-on-hover/main/chrome.css",
+  "readme": "https://raw.githubusercontent.com/SirOMGitsYOU/zen-sidebar-expand-on-hover/main/README.md",
+  "image": "https://raw.githubusercontent.com/StormAnon/zen-sidebar-expand-on-hover/main/screenshot.png",
+  "author": "SirOMGitsYOU",
+  "version": "1.0.2",
+  "tags": [],
+  "createdAt": "2025-07-16",
+  "updatedAt": "2026-03-28",
+  "preferences": "https://raw.githubusercontent.com/SirOMGitsYOU/zen-sidebar-expand-on-hover/main/preferences.json"
+}
