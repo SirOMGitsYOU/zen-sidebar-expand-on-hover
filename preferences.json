@@ -81,13 +81,6 @@
         "placeholder": "e.g. 32px"
     },
     {
-        "property": "mod.autoexpand.panel_top_inset",
-        "label": "Sidebar background top cut (px) — hides fold-out panel above this line (align with bookmark bar bottom)",
-        "type": "string",
-        "defaultValue": "0px",
-        "placeholder": "e.g. 72px"
-    },
-    {
         "property": "mod.autoexpand.remove_line_separator",
         "label": "Remove the thin line separator under the pinned tabs",
         "type": "checkbox",

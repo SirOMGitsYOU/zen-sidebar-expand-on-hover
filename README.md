@@ -46,5 +46,4 @@ In the mods menu, click the gear icon:
 - Essentials layout, fade sleeping tabs/folders
 - Hide workspace indicator
 - **Space above pinned tabs when workspace indicator is hidden (px)** — e.g. `32px`
-- **Sidebar panel top inset (px)** — lowers the fold-out background so it does not cover the bookmarks bar (try `64px`–`88px` depending on toolbar layout)
 - Remove pinned-tabs separator line

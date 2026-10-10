@@ -15,7 +15,6 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
       --transition-delay: var(--mod-autoexpand-animation_delay);
       --transition-delay-after: var(--mod-autoexpand-collapse_delay);
       --collapsed-tab-bar-width: var(--mod-autoexpand-collapsed_width);
-      --sidebar-panel-top-inset: var(--mod-autoexpand-panel_top_inset);
       --win-radius: 6px;
       --linux-radius: 8px;
       --mac-radius: 10px;
@@ -193,7 +192,7 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
       }
 
       #navigator-toolbox:has(#urlbar[open]){
-      clip-path: inset(var(--sidebar-panel-top-inset) 0 0 0) !important;
+      clip-path: none !important;
       }
 
       /*Main code block that defines the expanded state (reverts changes of the collapsed state, and clips the viewport)*/
@@ -207,44 +206,22 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
       --my-width: calc(var(--collapsed-tab-bar-width) + 8px);
       --hide: calc(var(--expanded-tab-bar-width) - var(--collapsed-tab-bar-width) - 5px);
       &:not([zen-right-side="true"]){
-        clip-path: inset(var(--sidebar-panel-top-inset) var(--hide) 0 0);
+        clip-path: inset(0 var(--hide) 0 0);
         padding-right: 5px !important;
       }
       &[zen-right-side="true"]{
         right: 0 !important;
-        clip-path: inset(var(--sidebar-panel-top-inset) 0 0 var(--hide));
+        clip-path: inset(0 0 0 var(--hide));
         padding-left: 5px !important;
       }
 
       position: absolute !important; //Removes it from the normal document flow, and needs the height adjustment
       z-index: -1 !important;
-      top: var(--sidebar-panel-top-inset) !important;
-      height: calc(100% - var(--sidebar-panel-top-inset)) !important;
-      overflow: clip !important;
-      -webkit-mask-image: linear-gradient(
-        to bottom,
-        transparent 0,
-        transparent var(--sidebar-panel-top-inset),
-        #000 var(--sidebar-panel-top-inset)
-      );
-      mask-image: linear-gradient(
-        to bottom,
-        transparent 0,
-        transparent var(--sidebar-panel-top-inset),
-        #000 var(--sidebar-panel-top-inset)
-      );
+      height: 100%;
       min-width: 100px !important;
       max-width: 4000px !important;
       width: var(--expanded-tab-bar-width) !important;
       --hover-width: 100px;
-
-      /* Zen compact sidebar color is painted on #titlebar::before, not the toolbox box model */
-      #titlebar::before {
-        top: var(--sidebar-panel-top-inset) !important;
-        height: calc(100% - var(--sidebar-panel-top-inset)) !important;
-        max-height: calc(100% - var(--sidebar-panel-top-inset)) !important;
-        clip-path: inset(0 0 0 0) !important;
-      }
 
       /*Expanded state. Activates on hover, popup menu, etc*/
       &:is(:hover, [has-popup-menu="true"], [movingtab], [flash-popup]), &:has(#urlbar[open], toolbarbutton[open="true"]:not(#zen-sidepanel-button)) {
@@ -254,7 +231,7 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
           --transition-delay-smooth: calc(var(--transition-delay) + 0ms);
           --transition-delay-fast: var(--transition-delay);
         }
-        clip-path: inset(var(--sidebar-panel-top-inset) 0 0 0);
+        clip-path: inset(0 0 0 0);
         --my-width: var(--expanded-tab-bar-width);
         ~ #zen-appcontent-wrapper {
           z-index: 0 !important;
